@@ -1,4 +1,4 @@
-# This is simple dictionary api (it is a part of big future project)
+# This is simple dictionary api <sub>(it is a part of big future project)</sub>
 
 It contains
 ```
