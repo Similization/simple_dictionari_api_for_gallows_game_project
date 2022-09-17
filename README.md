@@ -3,7 +3,6 @@
 It contains
 - sql file - to create and fill your own database with any words and pairs you want (used MySQL)
 - controller - to track specific queries
--
 ```
 GET    api/words      - to get all words
 GET    api/words/{id} - to get word by id
@@ -15,7 +14,7 @@ DELETE api/words/{id} - to delete word by id
 - entities - to work with databases rows like objects
 - repository/dao
 - service
-- aspects - to log
+- aspects - to follow the methods and log information into the logger file
 - exception handlers
 - logs
 
