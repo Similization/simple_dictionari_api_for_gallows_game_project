@@ -1,7 +1,7 @@
 # This is simple dictionary api 
 ###### (it is a part of my big future project)
 
-It contains
+## It contains
 - sql file - to create and fill your own database with any words and pairs you want (used MySQL)
 - controller - to track specific queries
 ```
@@ -19,4 +19,4 @@ DELETE api/words/{id} - to delete word by id
 - exception handlers
 - logs
 
-The main idea is to use this rest api for my main project
+#### The main goal of this project is to develop knowledge in this area and gradually move to best practice wherever possible
