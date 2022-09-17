@@ -1,4 +1,4 @@
-# This is simple dictionary api <sub>(it is a part of big future project)</sub>
+# This is simple dictionary api <sup>(it is a part of big future project)</sup>
 
 It contains
 - sql file - to create and fill your own database with any words and pairs you want (used MySQL)
