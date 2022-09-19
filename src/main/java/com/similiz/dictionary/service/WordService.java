@@ -16,5 +16,7 @@ public interface WordService {
 
     void save(Word word);
 
+    void deleteAll();
+
     String delete(long id);
 }

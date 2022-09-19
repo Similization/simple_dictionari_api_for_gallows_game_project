@@ -10,6 +10,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.logging.*;
@@ -24,8 +25,8 @@ public class LoggingAspect {
     public Object loggingAllRepositoryMethodsAdvice(ProceedingJoinPoint pjp)
             throws Throwable {
         Object object = null;
-        try {
-            LogManager.getLogManager().readConfiguration(Files.newInputStream(Paths.get("logging.properties")));
+        try (InputStream in = getClass().getResourceAsStream("/logging.properties")) {
+            LogManager.getLogManager().readConfiguration(in);
         } catch (SecurityException | IOException e1) {
             e1.printStackTrace();
         }

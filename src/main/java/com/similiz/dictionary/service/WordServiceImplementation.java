@@ -46,6 +46,12 @@ public class WordServiceImplementation implements WordService {
 
     @Override
     @Transactional
+    public void deleteAll() {
+        wordRepository.deleteAll();
+    }
+
+    @Override
+    @Transactional
     public String delete(long id) {
         if (wordRepository.findById(id) != null) {
             wordRepository.deleteById(id);

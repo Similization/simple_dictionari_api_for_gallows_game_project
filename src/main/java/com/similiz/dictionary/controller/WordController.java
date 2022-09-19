@@ -67,6 +67,13 @@ public class WordController {
         return word;
     }
 
+    @DeleteMapping("/words")
+    public String deleteAllWords() {
+        wordService.deleteAll();
+        log.info("All words were deleted");
+        return "All words were deleted";
+    }
+
     @DeleteMapping("/words/{id}")
     public String deleteWordById(@PathVariable long id) {
         if (wordService.findById(id) == null) {

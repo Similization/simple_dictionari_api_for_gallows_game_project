@@ -8,6 +8,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -21,6 +22,12 @@ public class WordRepositoryImplementation implements WordRepository {
         Session session = sessionFactory.getCurrentSession();
         Query<Word> wordQuery = session.createQuery("select w from Word w", Word.class);
         return wordQuery.getResultList();
+    }
+
+    @Override
+    public Word findById(long id) {
+        Session session = sessionFactory.getCurrentSession();
+        return session.get(Word.class, id);
     }
 
     @Override
@@ -39,15 +46,26 @@ public class WordRepositoryImplementation implements WordRepository {
     }
 
     @Override
-    public Word findById(long id) {
+    public <T extends Word> List<T> saveAll(Iterable<T> words) {
         Session session = sessionFactory.getCurrentSession();
-        return session.get(Word.class, id);
+        List<T> wordsList = new ArrayList<>();
+        for (T word : words) {
+            session.save(word);
+            wordsList.add(word);
+        }
+        return wordsList;
     }
 
     @Override
     public void save(Word word) {
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(word);
+    }
+
+    @Override
+    public void deleteAll() {
+        Session session = sessionFactory.getCurrentSession();
+        session.createQuery("delete from Word").executeUpdate();
     }
 
     @Override
