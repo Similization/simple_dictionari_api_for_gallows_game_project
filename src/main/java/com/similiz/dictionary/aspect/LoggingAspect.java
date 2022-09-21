@@ -4,6 +4,7 @@
 //import com.similiz.dictionary.log.LogFilter;
 //import com.similiz.dictionary.log.LogFormatter;
 //import com.similiz.dictionary.log.LogHandler;
+//import com.similiz.dictionary.util.PropertiesUtil;
 //import org.aspectj.lang.ProceedingJoinPoint;
 //import org.aspectj.lang.annotation.Around;
 //import org.aspectj.lang.annotation.Aspect;
@@ -36,7 +37,7 @@
 //        logger.addHandler(new LogHandler());
 //        try {
 //            //  get absolute path to logger
-//            URL resource = getClass().getClassLoader().getResource("logger.log");
+//            URL resource = getClass().getClassLoader().getResource(PropertiesUtil.get("aspect.logging.file"));
 //            assert resource != null;
 //            String absolutePath = Paths.get(resource.toURI()).toFile().getAbsolutePath();
 //            //  FileHandler file name with max size and number of log files limit

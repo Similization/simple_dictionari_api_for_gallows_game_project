@@ -1,9 +1,8 @@
 package com.similiz.dictionary.configuration;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.similiz.dictionary.util.PropertiesUtil;
 import org.springframework.context.annotation.*;
-import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -23,20 +22,14 @@ import java.util.Properties;
         "classpath:logging.properties"
 })
 public class Config {
-
-    @Autowired
-    private Environment environment;
     @Bean
     public DataSource dataSource() {
         ComboPooledDataSource pool = new ComboPooledDataSource();
         try {
             pool.setDriverClass("com.mysql.cj.jdbc.Driver");
-            //  pool.setJdbcUrl("jdbc:mysql://localhost:3306/dictionary?allowPublicKeyRetrieval=true&useSSL=false");
-            pool.setJdbcUrl(environment.getProperty("db.jdbcURL"));
-            //  pool.setUser("bestuser");
-            pool.setUser(environment.getProperty("db.login"));
-            //  pool.setPassword("bestuser");
-            pool.setPassword(environment.getProperty("db.password"));
+            pool.setJdbcUrl(PropertiesUtil.get("db.jdbcURL"));
+            pool.setUser(PropertiesUtil.get("db.login"));
+            pool.setPassword(PropertiesUtil.get("db.password"));
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
         }

@@ -2,7 +2,7 @@ package com.similiz.dictionary.repository;
 
 import com.similiz.dictionary.entity.Word;
 import com.similiz.dictionary.util.ConnectionManager;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Connection;
@@ -14,13 +14,22 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
 
+
+@TestInstance(value = TestInstance.Lifecycle.PER_METHOD)
 class WordRepositoryImplementationTest {
 
 //    @Autowired
 //    private WordRepository wordRepository;
 
+    @BeforeAll
+    static void initAll() {}
+    @BeforeEach
+    void initEach() {}
+
     @Test
     void returnNullIfWordsTableIsEmpty() {
+        // use reflection to change current database on test database
+
         String sql = "select * from dictionary.words";
         try (Connection connection = ConnectionManager.open();
              Statement statement = connection.createStatement()) {
@@ -36,11 +45,17 @@ class WordRepositoryImplementationTest {
             }
 
 //            List<Word> wordRepositoryFindAllMethodResult = wordRepository.findAll();
-
+//
 //            assertSame(wordRepositoryFindAllMethodResult, wordList);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
+    @AfterEach
+    void closeAfterEach() {}
+
+    @AfterAll
+    static void closeAfterAll() {}
 }
