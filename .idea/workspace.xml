@@ -10,15 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3986821e-9d9b-4d16-8080-cb44f67ea913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/util/PropertiesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/TestLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/SameWordsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/WordTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect/LoggingAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/configuration/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/configuration/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/SameWordsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/SameWordsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/WordTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,18 +136,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordsLibrary" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.similiz.dictionary.util.*" />
+          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
-      <option name="METHOD_NAME" value="returnNullIfWordsTableIsEmpty" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -454,7 +447,7 @@
     <list>
       <item itemvalue="Application.TestLauncher" />
       <item itemvalue="JUnit.SameWordsTest" />
-      <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty" />
+      <item itemvalue="JUnit.WordTest" />
       <item itemvalue="JUnit.WordTest.noArgsConstructorDoesNotChangeValues" />
       <item itemvalue="JUnit.WordTest.toStringHasCorrectFormat" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.23" />
@@ -464,10 +457,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestLauncher" />
+        <item itemvalue="JUnit.WordTest" />
         <item itemvalue="JUnit.SameWordsTest" />
         <item itemvalue="JUnit.WordTest.toStringHasCorrectFormat" />
         <item itemvalue="JUnit.WordTest.noArgsConstructorDoesNotChangeValues" />
-        <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -488,7 +481,7 @@
       <workItem from="1663264156604" duration="2102000" />
       <workItem from="1663431611074" duration="3360000" />
       <workItem from="1663436115926" duration="2996000" />
-      <workItem from="1663609893291" duration="46410000" />
+      <workItem from="1663609893291" duration="48593000" />
     </task>
     <servers />
   </component>
@@ -542,11 +535,6 @@
           <line>38</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/SameWordsTest.java</url>
-          <line>138</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.nio.file.NoSuchFileException" package="java.nio.file" />
           <option name="timeStamp" value="7" />
@@ -557,5 +545,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WordsLibrary$SameWordsTest.ic" NAME="SameWordsTest Coverage Results" MODIFIED="1663781539333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.similiz.dictionary.entity.*</FILTER>
+    </SUITE>
   </component>
 </project>

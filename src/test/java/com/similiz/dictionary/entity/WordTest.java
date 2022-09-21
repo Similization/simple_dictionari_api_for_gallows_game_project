@@ -1,19 +1,41 @@
 package com.similiz.dictionary.entity;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 import java.lang.reflect.Field;
+import java.util.Random;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertAll;
 
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 class WordTest {
+
+    private static final long[] ids = new long[]{
+            1, 12, 45, 6, 909, 4, 32, 100000, 2
+    };
+    private static final String[] words = new String[]{
+            "apple", "pie", "book", "romance", "fruit", "orange"
+    };
+    private long id;
+    private String name;
     private Word word;
+    private static Random idRandomizer;
+    private static Random wordRandomizer;
+
+    @BeforeAll
+    static void initializeStatic() {
+        idRandomizer = new Random(2854035);
+        wordRandomizer = new Random(1795347);
+    }
 
     @BeforeEach
     void initializeWord() {
+        id = ids[idRandomizer.nextInt(ids.length)];
+        name = words[wordRandomizer.nextInt(words.length)];
         word = new Word();
     }
 
@@ -36,19 +58,38 @@ class WordTest {
 
     @Test
     void allArgsConstructorDoesNotChangeValues() {
-        long newId = 14;
-        String newName = "apple";
-        word = new Word(newId, newName);
+        word = new Word(id, name);
         try {
             Field fieldId = word.getClass().getDeclaredField("id");
             fieldId.setAccessible(true);
-            long id = fieldId.getLong(word);
-            assertThat(id).isEqualTo(newId);
+            long actualId = fieldId.getLong(word);
+            assertThat(actualId).isEqualTo(id);
 
             Field fieldName = word.getClass().getDeclaredField("name");
             fieldName.setAccessible(true);
-            String name = (String) fieldName.get(word);
-            assertThat(name).isEqualTo(newName);
+            String actualName = (String) fieldName.get(word);
+            assertThat(actualName).isEqualTo(name);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Test
+    void checkBuilderOnCorrectInsertValues() {
+        word = Word.builder().id(id).name(name).build();
+        try {
+            Field fieldId = word.getClass().getDeclaredField("id");
+            fieldId.setAccessible(true);
+            long actualId = fieldId.getLong(word);
+
+            Field fieldName = word.getClass().getDeclaredField("name");
+            fieldName.setAccessible(true);
+            String actualName = (String) fieldName.get(word);
+
+            assertAll(
+                    () -> assertThat(actualId).isEqualTo(id),
+                    () -> assertThat(actualName).isEqualTo(name)
+            );
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
@@ -61,9 +102,8 @@ class WordTest {
 
     @Test
     void getIdReturnsUpdatedValueAfterSet() {
-        int newId = 4;
-        word = new Word(newId, null);
-        assertThat(word.getId()).isEqualTo(newId);
+        word = new Word(id, null);
+        assertThat(word.getId()).isEqualTo(id);
     }
 
     @Test
@@ -73,20 +113,18 @@ class WordTest {
 
     @Test
     void getNameReturnsUpdatedValueAfterSet() {
-        String newName = "apple";
-        word = new Word(0, newName);
-        assertThat(word.getName()).isEqualTo(newName);
+        word = new Word(0, name);
+        assertThat(word.getName()).isEqualTo(name);
     }
 
     @Test
     void setIdSetCorrectValue() {
-        long newId = 23;
-        word.setId(newId);
+        word.setId(id);
         try {
             Field fieldId = word.getClass().getDeclaredField("id");
             fieldId.setAccessible(true);
-            long id = fieldId.getLong(word);
-            assertThat(id).isEqualTo(newId);
+            long actualId = fieldId.getLong(word);
+            assertThat(actualId).isEqualTo(id);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
@@ -94,13 +132,12 @@ class WordTest {
 
     @Test
     void setNameSetCorrectValue() {
-        String newName = "pie";
-        word.setName(newName);
+        word.setName(name);
         try {
             Field fieldName = word.getClass().getDeclaredField("name");
             fieldName.setAccessible(true);
-            String name = (String) fieldName.get(word);
-            assertThat(name).isEqualTo(newName);
+            String actualName = (String) fieldName.get(word);
+            assertThat(actualName).isEqualTo(name);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
