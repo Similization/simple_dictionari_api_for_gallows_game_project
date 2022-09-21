@@ -10,12 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3986821e-9d9b-4d16-8080-cb44f67ea913" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/util/ConnectionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/util/PropertiesUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/applicationTest.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect/LoggingAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/repository/WordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/repository/WordRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/repository/WordRepositoryImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/repository/WordRepositoryImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/service/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/service/WordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/service/WordServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/service/WordServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/configuration/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/configuration/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/log/LogFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/log/LogFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logger.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,35 +72,38 @@
     </option>
   </component>
   <component name="ProjectId" id="2EfJVBkRcpBFfsP1oWEXFsfAHKn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/similization/Programming/IdeaProjects/MyBigProjects/GallowGamesProject/WordsLibrary&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4218391&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.debugger.capture&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;5f775b32718c2e079965f37b494f000c&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/similization/Programming/IdeaProjects/MyBigProjects/GallowGamesProject/WordsLibrary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4218391",
+    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture",
+    "spring.configuration.checksum": "5f775b32718c2e079965f37b494f000c"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/exception_handler" />
@@ -107,7 +114,85 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.64">
+  <component name="RunManager" selected="JUnit.WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty">
+    <configuration name="WordRepositoryImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
+      <option name="METHOD_NAME" value="returnNullIfWordsTableIsEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordTest.NoArgsConstructorCreatesDefaultObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
+      <option name="METHOD_NAME" value="NoArgsConstructorCreatesDefaultObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.0.23" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -370,10 +455,24 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.WordRepositoryImplementationTest" />
+      <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty" />
+      <item itemvalue="JUnit.WordTest" />
+      <item itemvalue="JUnit.WordTest.NoArgsConstructorCreatesDefaultObject" />
+      <item itemvalue="JUnit.WordTest.test" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.23" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.65" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.64" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfWordsTableIsEmpty" />
+        <item itemvalue="JUnit.WordRepositoryImplementationTest" />
+        <item itemvalue="JUnit.WordTest.NoArgsConstructorCreatesDefaultObject" />
+        <item itemvalue="JUnit.WordTest" />
+        <item itemvalue="JUnit.WordTest.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -392,7 +491,7 @@
       <workItem from="1663264156604" duration="2102000" />
       <workItem from="1663431611074" duration="3360000" />
       <workItem from="1663436115926" duration="2996000" />
-      <workItem from="1663609893291" duration="906000" />
+      <workItem from="1663609893291" duration="31766000" />
     </task>
     <servers />
   </component>
@@ -410,23 +509,41 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/similiz/dictionary/controller/WordController.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/similiz/dictionary/service/WordServiceImplementation.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect/LoggingAspect.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/similiz/dictionary/repository/WordRepositoryImplementation.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="4" />
+          <line>21</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/similiz/dictionary/configuration/Config.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/WordTest.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect/LoggingAspect.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.nio.file.NoSuchFileException" package="java.nio.file" />

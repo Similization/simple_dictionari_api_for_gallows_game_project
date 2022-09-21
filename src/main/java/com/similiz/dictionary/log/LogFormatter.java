@@ -7,9 +7,9 @@ import java.util.logging.LogRecord;
 public class LogFormatter extends Formatter {
     @Override
     public String format(LogRecord record) {
-        return record.getSourceClassName() + "::"
-                + record.getSourceMethodName() + "::"
-                + new Date(record.getMillis()) + "::"
+        return record.getSourceClassName() + ":"
+                + record.getSourceMethodName() + ":"
+                + new Date(record.getMillis()) + ":"
                 + record.getMessage() + "\n";
     }
 }

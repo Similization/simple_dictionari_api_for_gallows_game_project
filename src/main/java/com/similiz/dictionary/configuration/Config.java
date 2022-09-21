@@ -31,12 +31,12 @@ public class Config {
         ComboPooledDataSource pool = new ComboPooledDataSource();
         try {
             pool.setDriverClass("com.mysql.cj.jdbc.Driver");
+            //  pool.setJdbcUrl("jdbc:mysql://localhost:3306/dictionary?allowPublicKeyRetrieval=true&useSSL=false");
             pool.setJdbcUrl(environment.getProperty("db.jdbcURL"));
+            //  pool.setUser("bestuser");
             pool.setUser(environment.getProperty("db.login"));
+            //  pool.setPassword("bestuser");
             pool.setPassword(environment.getProperty("db.password"));
-//            pool.setJdbcUrl("jdbc:mysql://localhost:3306/dictionary?allowPublicKeyRetrieval=true&useSSL=false");
-//            pool.setUser("bestuser");
-//            pool.setPassword("bestuser");
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
         }
