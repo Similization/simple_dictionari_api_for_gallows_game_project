@@ -10,9 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3986821e-9d9b-4d16-8080-cb44f67ea913" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordArgumentsProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/util/PropertiesUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/entity/SameWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/entity/SameWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/entity/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/entity/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/util/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/util/PropertiesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/TestLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/TestLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/SameWordsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/SameWordsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/entity/WordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/util/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/testUtils/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/util/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/similiz/dictionary/testUtils/PropertiesUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,77 +119,81 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/similiz/dictionary/aspect" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestLauncher">
-    <configuration name="TestLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.TestLauncher" />
+  <component name="RunManager" selected="JUnit.WordRepositoryImplementationTest">
+    <configuration name="WordRepositoryImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordsLibrary" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.similiz.dictionary.*" />
+          <option name="PATTERN" value="com.similiz.dictionary.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SameWordsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WordsLibrary" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.SameWordsTest" />
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordsLibrary" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
+          <option name="PATTERN" value="com.similiz.dictionary.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordTest.noArgsConstructorDoesNotChangeValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WordsLibrary" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
-      <option name="METHOD_NAME" value="noArgsConstructorDoesNotChangeValues" />
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
+      <option name="METHOD_NAME" value="returnNullIfNoWordsWithSuchIdOtherwiseReturnWord(long)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordTest.toStringHasCorrectFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="WordsLibrary" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.similiz.dictionary.entity.*" />
+          <option name="PATTERN" value="com.similiz.dictionary.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.similiz.dictionary.entity" />
-      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.entity.WordTest" />
-      <option name="METHOD_NAME" value="toStringHasCorrectFormat" />
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
+      <option name="METHOD_NAME" value="returnNullIfNoWordsWithSuchIdOtherwiseReturnWord(com.similiz.dictionary.entity.Word)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
+      <option name="METHOD_NAME" value="returnNullIfNoWordsWithSuchIdOtherwiseReturnWord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordRepositoryImplementationTest.returnPairOfSameWordsByIdOtherwiseReturnNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WordsLibrary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.similiz.dictionary.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.similiz.dictionary.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.similiz.dictionary.repository.WordRepositoryImplementationTest" />
+      <option name="METHOD_NAME" value="returnPairOfSameWordsByIdOtherwiseReturnNull(long)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -445,22 +461,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TestLauncher" />
-      <item itemvalue="JUnit.SameWordsTest" />
-      <item itemvalue="JUnit.WordTest" />
-      <item itemvalue="JUnit.WordTest.noArgsConstructorDoesNotChangeValues" />
-      <item itemvalue="JUnit.WordTest.toStringHasCorrectFormat" />
+      <item itemvalue="JUnit.WordRepositoryImplementationTest" />
+      <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord" />
+      <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord (1)" />
+      <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord (2)" />
+      <item itemvalue="JUnit.WordRepositoryImplementationTest.returnPairOfSameWordsByIdOtherwiseReturnNull" />
       <item itemvalue="Tomcat Server.Tomcat 10.0.23" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.65" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.64" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestLauncher" />
-        <item itemvalue="JUnit.WordTest" />
-        <item itemvalue="JUnit.SameWordsTest" />
-        <item itemvalue="JUnit.WordTest.toStringHasCorrectFormat" />
-        <item itemvalue="JUnit.WordTest.noArgsConstructorDoesNotChangeValues" />
+        <item itemvalue="JUnit.WordRepositoryImplementationTest" />
+        <item itemvalue="JUnit.WordRepositoryImplementationTest.returnPairOfSameWordsByIdOtherwiseReturnNull" />
+        <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord (2)" />
+        <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord (1)" />
+        <item itemvalue="JUnit.WordRepositoryImplementationTest.returnNullIfNoWordsWithSuchIdOtherwiseReturnWord" />
       </list>
     </recent_temporary>
   </component>
@@ -481,7 +497,7 @@
       <workItem from="1663264156604" duration="2102000" />
       <workItem from="1663431611074" duration="3360000" />
       <workItem from="1663436115926" duration="2996000" />
-      <workItem from="1663609893291" duration="48593000" />
+      <workItem from="1663609893291" duration="76007000" />
     </task>
     <servers />
   </component>
@@ -531,23 +547,50 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/com/similiz/dictionary/util/PropertiesUtilTest.java</url>
           <line>38</line>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/similiz/dictionary/repository/WordRepositoryImplementationTest.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.nio.file.NoSuchFileException" package="java.nio.file" />
           <option name="timeStamp" value="7" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="31" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.mockito.internal.creation.bytebuddy.MockMethodInterceptor" memberName="mockCreationSettings" />
+        <PinnedItemInfo parentTag="org.mockito.internal.creation.bytebuddy.ByteBuddyCrossClassLoaderSerializationSupport" memberName="mutex" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WordsLibrary$PropertiesUtilTest.ic" NAME="PropertiesUtilTest Coverage Results" MODIFIED="1663953474182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.similiz.dictionary.util.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/WordsLibrary$WordRepositoryImplementationTest.ic" NAME="WordRepositoryImplementationTest Coverage Results" MODIFIED="1664206511062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.similiz.dictionary.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/WordsLibrary$TestLauncher.ic" NAME="TestLauncher Coverage Results" MODIFIED="1663782183269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.similiz.dictionary.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/WordsLibrary$SameWordsTest.ic" NAME="SameWordsTest Coverage Results" MODIFIED="1663781539333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.similiz.dictionary.entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/WordsLibrary$WordTest.ic" NAME="WordTest Coverage Results" MODIFIED="1663782010168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.similiz.dictionary.entity.*</FILTER>
     </SUITE>
   </component>

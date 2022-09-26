@@ -1,9 +1,6 @@
 package com.similiz.dictionary.entity;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 import java.lang.reflect.Field;
 import java.util.Random;
@@ -11,6 +8,7 @@ import java.util.Random;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
+@Tag("fast")
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 class WordTest {
 
@@ -39,6 +37,7 @@ class WordTest {
         word = new Word();
     }
 
+    @Tag("constructor")
     @Test
     void noArgsConstructorDoesNotChangeValues() {
         try {
@@ -56,6 +55,7 @@ class WordTest {
         }
     }
 
+    @Tag("constructor")
     @Test
     void allArgsConstructorDoesNotChangeValues() {
         word = new Word(id, name);
@@ -74,6 +74,7 @@ class WordTest {
         }
     }
 
+    @Tag("builder")
     @Test
     void checkBuilderOnCorrectInsertValues() {
         word = Word.builder().id(id).name(name).build();
@@ -95,28 +96,33 @@ class WordTest {
         }
     }
 
+    @Tag("getter")
     @Test
     void getIdReturnsDefaultValueIfNoOtherWasPassed() {
         assertThat(word.getId()).isZero();
     }
 
+    @Tag("getter")
     @Test
     void getIdReturnsUpdatedValueAfterSet() {
         word = new Word(id, null);
         assertThat(word.getId()).isEqualTo(id);
     }
 
+    @Tag("getter")
     @Test
     void getNameReturnsDefaultValueIfNoOtherWasPassed() {
         assertThat(word.getName()).isNull();
     }
 
+    @Tag("getter")
     @Test
     void getNameReturnsUpdatedValueAfterSet() {
         word = new Word(0, name);
         assertThat(word.getName()).isEqualTo(name);
     }
 
+    @Tag("setter")
     @Test
     void setIdSetCorrectValue() {
         word.setId(id);
@@ -130,6 +136,7 @@ class WordTest {
         }
     }
 
+    @Tag("setter")
     @Test
     void setNameSetCorrectValue() {
         word.setName(name);

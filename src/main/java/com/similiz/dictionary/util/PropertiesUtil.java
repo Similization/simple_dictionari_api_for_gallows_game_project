@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertiesUtil {
+    private static final String propertiesDirectory = "application.properties";
     private static final Properties PROPERTIES = new Properties();
 
     static {
@@ -16,7 +17,7 @@ public class PropertiesUtil {
     }
     private static void loadProperties() {
         try (InputStream inputStream = PropertiesUtil.class.getClassLoader()
-                .getResourceAsStream("application.properties")) {
+                .getResourceAsStream(propertiesDirectory)) {
             PROPERTIES.load(inputStream);
         } catch (IOException e) {
             throw new RuntimeException(e);

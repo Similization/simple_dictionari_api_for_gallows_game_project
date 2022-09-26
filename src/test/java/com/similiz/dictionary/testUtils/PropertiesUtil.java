@@ -1,4 +1,4 @@
-package com.similiz.dictionary.util;
+package com.similiz.dictionary.testUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +15,7 @@ public class PropertiesUtil {
         return PROPERTIES.getProperty(key);
     }
     private static void loadProperties() {
-        try (InputStream inputStream = PropertiesUtil.class.getClassLoader().getResourceAsStream("applicationTest.properties")) {
+        try (InputStream inputStream = com.similiz.dictionary.util.PropertiesUtil.class.getClassLoader().getResourceAsStream("applicationTest.properties")) {
             PROPERTIES.load(inputStream);
         } catch (IOException e) {
             throw new RuntimeException(e);

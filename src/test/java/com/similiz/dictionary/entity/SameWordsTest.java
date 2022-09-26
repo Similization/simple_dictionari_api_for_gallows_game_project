@@ -8,6 +8,7 @@ import java.util.Random;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
+@TestMethodOrder(value = MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 class SameWordsTest {
 
@@ -47,6 +48,7 @@ class SameWordsTest {
 
     @Test
     @Order(1)
+    @DisplayName(value = "check correct work of no args constructor")
     void noArgsConstructorDoesNotChangeValues() {
         try {
             Field fieldId = sameWords.getClass().getDeclaredField("id");
@@ -126,32 +128,37 @@ class SameWordsTest {
         }
     }
 
-    @Test
-    @Order(2)
-    void getIdReturnsDefaultValueIfNoOtherWasPassed() {
-        assertThat(sameWords.getId()).isZero();
-    }
+    @Nested
+    @DisplayName(value = "test same words getter functionality")
+    @Tag("getter")
+    class GetterTest {
+        @Test
+        @Order(2)
+        void getIdReturnsDefaultValueIfNoOtherWasPassed() {
+            assertThat(sameWords.getId()).isZero();
+        }
 
-    @Test
-    @Order(2)
-    void getIdReturnsUpdatedValueAfterSet() {
-        sameWords = new SameWords(id, null, null);
-        assertThat(sameWords.getId()).isEqualTo(id);
-    }
+        @Test
+        @Order(2)
+        void getIdReturnsUpdatedValueAfterSet() {
+            sameWords = new SameWords(id, null, null);
+            assertThat(sameWords.getId()).isEqualTo(id);
+        }
 
-    @Test
-    @Order(2)
-    void getWordReturnsDefaultValueIfNoOtherWasPassed() {
-        assertThat(sameWords.getWord1()).isNull();
-        assertThat(sameWords.getWord2()).isNull();
-    }
+        @Test
+        @Order(2)
+        void getWordReturnsDefaultValueIfNoOtherWasPassed() {
+            assertThat(sameWords.getWord1()).isNull();
+            assertThat(sameWords.getWord2()).isNull();
+        }
 
-    @Test
-    @Order(2)
-    void getWordReturnsUpdatedValueAfterSet() {
-        sameWords = new SameWords(id, word1, word2);
-        assertThat(sameWords.getWord1()).isSameAs(word1);
-        assertThat(sameWords.getWord2()).isSameAs(word2);
+        @Test
+        @Order(2)
+        void getWordReturnsUpdatedValueAfterSet() {
+            sameWords = new SameWords(id, word1, word2);
+            assertThat(sameWords.getWord1()).isSameAs(word1);
+            assertThat(sameWords.getWord2()).isSameAs(word2);
+        }
     }
 
     @Test
@@ -188,4 +195,3 @@ class SameWordsTest {
         }
     }
 }
-

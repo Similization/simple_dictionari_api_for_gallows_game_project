@@ -1,4 +1,4 @@
-package com.similiz.dictionary.util;
+package com.similiz.dictionary.testUtils;
 
 import lombok.NoArgsConstructor;
 
